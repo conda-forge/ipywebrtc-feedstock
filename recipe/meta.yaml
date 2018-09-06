@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
     - setuptools
   run:
     - python
-    - ipywidgets >=7.0
+    - ipywidgets >=7.4
 
 test:
   imports:
