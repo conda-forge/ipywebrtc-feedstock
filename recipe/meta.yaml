@@ -1,6 +1,6 @@
 {% set name = "ipywebrtc" %}
-{% set version = "0.4.0" %}
-{% set sha256 = "4812578f74252607c8e3fbd272fd86875461a37f861f15f44061b3446dab7bc4" %}
+{% set version = "0.4.1" %}
+{% set sha256 = "f43679b11ef3b3801fd0a81523d917f93ac1fcd5a52e5f5cf6031bf1d65774ca" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   script: python -m pip install --no-deps --ignore-installed .
 
 requirements:
