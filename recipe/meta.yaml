@@ -1,25 +1,21 @@
-{% set name = "ipywebrtc" %}
 {% set version = "0.4.1" %}
-{% set sha256 = "f43679b11ef3b3801fd0a81523d917f93ac1fcd5a52e5f5cf6031bf1d65774ca" %}
 
 package:
-  name: {{ name|lower }}
+  name: ipywebrtc
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/i/ipywebrtc/ipywebrtc-{{ version }}.tar.gz
+  sha256: f43679b11ef3b3801fd0a81523d917f93ac1fcd5a52e5f5cf6031bf1d65774ca
 
 build:
   number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   host:
     - pip
     - python
-    - setuptools
   run:
     - python
     - ipywidgets >=7.4
