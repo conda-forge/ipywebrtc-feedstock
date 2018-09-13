@@ -1,1 +1,1 @@
-"${PREFIX}/bin/jupyter-nbextension" disable ipywebrtc --py --sys-prefix > /dev/null 2>&1
+"${PREFIX}/bin/jupyter-nbextension" uninstall ipywebrtc --py --sys-prefix > /dev/null 2>&1
