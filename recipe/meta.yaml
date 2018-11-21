@@ -1,4 +1,4 @@
-{% set version = "0.4.2" %}
+{% set version = "0.4.3" %}
 
 package:
   name: ipywebrtc
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/i/ipywebrtc/ipywebrtc-{{ version }}.tar.gz
-  sha256: c3cd1e863d91168680fabb76980d9b81a75e6970aa89dab3130dbc25dc13e377
+  sha256: 77896cc873d7641b0fda4b90f665f8ec8fd4c25fd6a39bf68f8d530a21645ba9
 
 build:
   number: 1000
