@@ -5,25 +5,27 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/i/ipywebrtc/ipywebrtc-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/i/ipywebrtc/ipywebrtc-{{ version }}.tar.gz
   sha256: f8ac3cc02b3633b59f388aef67961cff57f90028fd303bb3886c63c3d631da13
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: "{{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv"
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - jupyter-packaging
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - ipywidgets >=7.6
     - numpy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - ipywebrtc
   commands:
